@@ -96,7 +96,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         else:
             return True
     except UserNotParticipant:
-        text = """**Fɪʀsᴛ ᴄʟɪᴄᴋ ᴏɴ Rᴇǫᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ . ᴛʜᴇɴ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴛᴏ ᴛʜᴇ ʙᴏᴛ ᴄʟɪᴄᴋ ᴏɴ ᴍᴇ ᴊᴏɪɴᴇᴅ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ...**"""
+        text = """<b>Hello Bro👋</b>\n\n<u><b>♦️ READ THIS INSTRUCTION ♦️</b></u>\n\n <i>🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം Try Again ബട്ടനിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..😍\n\n</i>  <i>🗣 In Order To Get The Movie Request, You Will Have To Join Our Official Channel First. After That, Use Try Again Button To Get Movie. I'll Send You That Movie For You❤️🙈\n\n</i>  <u><b>👇JOIN THIS CHANNEL & TRY Again</b>👇</u>"""
 
         buttons = [
             [
@@ -106,7 +106,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
                 InlineKeyboardButton("㋡ Wʜʏ I'ᴍ Jᴏɪɴɪɴɢ", callback_data='whyjoin')
             ],
             [
-                InlineKeyboardButton("📥 Mᴇ Jᴏɪɴᴇᴅ 📥", callback_data=f"{mode}#{file_id}")
+                InlineKeyboardButton("📥 ᴛʀʏ ᴀɢᴀɪɴ 📥", callback_data=f"{mode}#{file_id}")
             ]
         ]
 
