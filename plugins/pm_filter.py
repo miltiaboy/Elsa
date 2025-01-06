@@ -213,7 +213,7 @@ async def next_page(bot, query):
             ]
     btn.insert(0,
                [
-                   InlineKeyboardButton(f' ♀️ {search} ♀️ ', 'qinfo')
+                   InlineKeyboardButton(f' ✨ {search} ✨ ', 'qinfo')
                ]
                )
     btn.insert(1,
@@ -1524,7 +1524,7 @@ async def auto_filter(client, msg, spoll=False):
     key = f"{message.chat.id}-{message.id}"
     btn.insert(0,
                [
-                   InlineKeyboardButton(f' ♀️ {search} ♀️ ', 'qinfo')
+                   InlineKeyboardButton(f' ✨ {search} ✨ ', 'qinfo')
                ]
                )
     btn.insert(1,
@@ -1588,7 +1588,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Found {str(total_results)} Results For Your Query: <code> {search}</code>"
+        cap = f"<b><i>Found</b></i><u><b>{str(total_results)}</b></u><b><i>Results For Your Query: </b></i> <b><u><code> {search}</u></b> </code>"
     if imdb and imdb.get('poster'):
         try:
             if message.chat.id == SUPPORT_CHAT_ID:
