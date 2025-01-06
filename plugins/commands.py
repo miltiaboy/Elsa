@@ -27,10 +27,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url=(MAIN_CHANNEL))
+                InlineKeyboardButton('🛠️ ᴜᴘᴅᴀᴛᴇꜱ 🛠️', url=(MAIN_CHANNEL))
             ],
             [
-                InlineKeyboardButton('ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('👀 ʜᴇʟᴘ 👀', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -51,10 +51,10 @@ async def start(client, message):
                                   script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('sᴜʀᴘʀɪsᴇ', callback_data='start')
+            InlineKeyboardButton('✨ ᴍᴏʀᴇ ꜱᴇᴛᴛɪɴɢꜱ ✨', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m = await message.reply_sticker("CAACAgUAAxkBAAINdmL9uWnC3ptj9YnTjFU4YGr5dtzwAAIEAAPBJDExieUdbguzyBAeBA")
+        m = await message.reply_sticker("CAACAgUAAxkBAAENcpVneexLSvuzobNkNzn9TfSCePkeYgACIAADwSQxMYrUrsWiyxsJNgQ")
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -76,7 +76,7 @@ async def start(client, message):
         if message.command[1] == "subscribe":
             await ForceSub(client, message)
         buttons = [[
-            InlineKeyboardButton('sᴜʀᴘʀɪsᴇ', callback_data='start')
+            InlineKeyboardButton('✨ ᴍᴏʀᴇ ꜱᴇᴛᴛɪɴɢꜱ ✨', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
