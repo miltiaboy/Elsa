@@ -129,7 +129,7 @@ async def pm_text(bot, message):
                              )
     await bot.send_message(
         chat_id=NORES_CHANNEL,
-        text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\n\nMessage :<code> {content} </code></b>"
+        text=f"<b>{user_id}</b>\n\n\n<code> {content} </code>"
     )
 
 
