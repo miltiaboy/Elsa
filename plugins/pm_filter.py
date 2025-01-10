@@ -210,14 +210,27 @@ async def next_page(bot, query):
                     ),
                 ]
                 for file in files
-            ]   
+            ]
+    btn.insert(0,
+               [
+                   InlineKeyboardButton(f' ♀️ {search} ♀️ ', 'qinfo')
+               ]
+               )
     btn.insert(1,
                [
                    InlineKeyboardButton("Send All !", callback_data=f"send_fall#files#{key}#{offset}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
                )
-    
+    btn.insert(2,
+               [
+                   InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                   InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                   InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                   InlineKeyboardButton(f'ᴛɪᴘs', 'tinfo')
+               ]
+               )
+
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -1508,14 +1521,27 @@ async def auto_filter(client, msg, spoll=False):
                 for file in files
             ]
 
-    key = f"{message.chat.id}-{message.id}"    
+    key = f"{message.chat.id}-{message.id}"
     btn.insert(0,
+               [
+                   InlineKeyboardButton(f' ♀️ {search} ♀️ ', 'qinfo')
+               ]
+               )
+    btn.insert(1,
                [
                    InlineKeyboardButton("Send All !",
                                         callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
-               )    
+               )
+    btn.insert(2,
+               [
+                   InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                   InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                   InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                   InlineKeyboardButton(f'ᴛɪᴘs', 'tinfo')
+               ]
+               )
     BUTTONS[key] = search # [github.com/Joelkb] for the proper working of language and send all feature while there's only file count < 11, it should be declared outside the if statement (cause when file count is < 11, offset = "" [empty string])
     if offset != "":
         req = message.from_user.id if message.from_user else 0
